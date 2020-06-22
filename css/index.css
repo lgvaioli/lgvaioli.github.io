@@ -1,0 +1,141 @@
+/* Saner defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Global variables */
+:root {
+  --navbar-color: #333;
+  --body-color: #3d498f;
+  --default-margin: 20px;
+  --section-padding: 50px;
+  --section-header: 2em;
+  --section-color-light: #3D498F;
+  --section-color-dark: #313B73;
+  --footer-padding: 50px;
+}
+
+
+/* Body and misc elements */
+body {
+  background-color: var(--body-color);
+  color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  margin-bottom: calc(var(--default-margin) * 2);
+  text-align: center;
+  font-size: 2em;
+}
+
+
+/* Navbar stuff */
+nav ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: var(--navbar-color);
+  top: 0;
+  left: 0;
+  margin-bottom: var(--default-margin);
+  width: 100%;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.8s;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+/* Sections stuff */
+section {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  color: white;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  overflow: hidden;
+}
+
+section h2 {
+  display: inline-block;
+  margin-bottom: var(--default-margin);
+  margin-left: var(--default-margin);
+  border-bottom: 2px dashed whitesmoke;
+}
+
+section h3 {
+  margin-left: var(--default-margin);
+  margin-bottom: calc(var(--default-margin) / 2);
+  padding-left: 7px;
+  border-left: 5px solid whitesmoke;
+}
+
+section ul {
+  margin-left: calc(var(--default-margin) * 2.5);
+  /*list-style-type: circle;*/
+  list-style-type: square;
+  margin-bottom: var(--default-margin);
+}
+
+section a {
+  color: whitesmoke;
+}
+
+section img {
+  float: right;
+  margin-right: calc(var(--default-margin) * 5);
+}
+
+.dark {
+  background-color: var(--section-color-dark);
+}
+
+.light {
+  background-color: var(--section-color-light);
+}
+
+/* Footer */
+footer {
+  background-color: var(--navbar-color);
+  padding-top: var(--footer-padding);
+  padding-bottom: var(--footer-padding);
+}
+
+footer p {
+  margin-left: var(--default-margin);
+  margin-bottom: var(--default-margin);
+}
+
+footer a {
+  display: block;
+  margin-left: var(--default-margin);
+  margin-bottom: var(--default-margin);
+  color: whitesmoke;
+}
+
+/* Phones */
+@media only screen and (max-width: 600px) {
+  section img {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: calc(var(--default-margin) * 2);
+  }
+}
